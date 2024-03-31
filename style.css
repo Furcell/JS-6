@@ -1,0 +1,106 @@
+body{
+    padding-top: 200px;
+}
+
+.header-element{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.nav-block{
+    position: relative;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(127, 219, 219);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255,101, 47,.2);
+}
+
+
+.nav-ul{
+    display: flex;
+    gap: 20px;
+}
+
+.menu-btn{
+    position: absolute;
+    top: 0;
+    right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    /* border:  3px solid white; */
+    display: none;
+}
+.menu-btn_burger{
+    width: 50px;
+    height: 6px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255,101, 47,.2);
+}
+.menu-btn_burger::before,
+.menu-btn_burger::after{
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 6px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255,101, 47,.2);
+    transition: all .5s ease-in-out;
+}
+.menu-btn_burger::before{
+    transform: translateY(-16px);
+}
+.menu-btn_burger::after{
+    transform: translateY(16px);
+}
+/* ANIMATION */
+.menu-btn.open .menu-btn_burger{
+    transform: translateX(-50px);
+    background: transparent;
+    box-shadow: none;
+}
+.menu-btn.open .menu-btn_burger::before{
+    transform: rotate(45deg) translate(35px, -35px);
+}
+.menu-btn.open .menu-btn_burger::after{
+    transform: rotate(-45deg) translate(35px, 35px);
+}
+
+.img1{
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+
+@media (max-width:480px){  
+    .menu-btn{
+        display: flex;
+    
+    }   
+    .navigation{
+        display: none;
+    }
+    .nav-block{
+        flex-direction: column;
+    }
+    .nav-ul{
+        flex-direction: column;
+        align-items: center;
+    }
+    .navigation.navActive{ /* თუ ნავიგაციას ექნება დამატებითი კლასის სახელი navActive-ი მაშინ უნდა გამოჩნდეს */
+        display: block;
+    }
+ 
+}
+
+

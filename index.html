@@ -1,14 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS6</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header-element">
+      <div class="nav-block">
+        <a href="index.html" ><img class="img1" src="img/bird_2.jpg" alt="bird2"></a>
+
+        <nav class="navigation" id="navBar">
+          <ul class="nav-ul">
+            <li><a href="">Home</a></li>
+            <li><a href="">News</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Contact</a></li>
+            <li><a href="">Info</a></li>
+          </ul>
+        </nav>
+
+        <div class="menu-btn" id="burgerBar">
+          <div class="menu-btn_burger"></div>
+        </div>
+
+      </div>
+    </header>
+
+    <section>
+      <h2>To Do List</h2>
+      <input type="text" id="input-element" name="inputfield" />
+      <button id="add-btn">Add Item</button>
+      <ul id="ul-list"></ul>
+    </section>
+
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
